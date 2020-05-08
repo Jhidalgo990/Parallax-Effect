@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Parallax Scrolling</title>
+  </head>
+  <body>
+    <section class="zoom">
+      <img src="images/mountain1.png" id="layer1" />
+      <img src="images/mountain2.png" id="layer2" />
+      <img src="images/text.png" id="text" />
+    </section>
+
+    <section class="content">
+      <h2>Simple Background Parallax Using Javascript</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
+        perspiciatis praesentium? Perferendis eveniet vero earum est delectus
+        obcaecati quaerat, cupiditate repudiandae! Qui, minus dignissimos
+        dolorem consequuntur eum quibusdam non optio. Lorem ipsum dolor sit,
+        amet consectetur adipisicing elit. Cupiditate quod beatae tempora
+        repellat excepturi cumque quos iure sequi. Sequi fugiat ab totam
+        laboriosam iste id necessitatibus, natus numquam voluptatem tenetur.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+        accusantium, nulla in excepturi incidunt dolorem porro sit temporibus
+        sint fugit itaque consequatur provident expedita est, deleniti molestiae
+        numquam quaerat suscipit. Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Neque asperiores fugiat nobis rem cum dolorum, eos
+        reiciendis, doloribus deserunt veniam quisquam corrupti voluptas
+        voluptatibus dolore commodi ipsa perferendis sit accusamus. Lorem ipsum
+        dolor sit, amet consectetur adipisicing elit. Laboriosam nemo eaque eum,
+        culpa animi quaerat nobis sint aut beatae, quidem doloremque. Mollitia,
+        temporibus neque! Perferendis minima cumque consequuntur eaque vel!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim accusamus
+        provident similique cupiditate quo, earum doloremque hic, accusantium
+        quod temporibus ipsa fuga est, illum numquam amet itaque asperiores
+        illo? Doloremque. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Vitae harum eaque adipisci consequuntur excepturi animi earum,
+        maiores sunt a quasi voluptatum ipsa quo itaque molestiae accusantium
+        nesciunt, recusandae consectetur. Dolore! Lorem ipsum, dolor sit amet
+        consectetur adipisicing elit. Magnam atque labore distinctio fuga
+        commodi odit est beatae modi exercitationem, architecto ratione harum
+        dolore? Voluptatibus, enim officiis? Error earum itaque saepe! Lorem
+        ipsum, dolor sit amet consectetur adipisicing elit. Laborum dicta harum
+        minima suscipit quasi quo vel neque distinctio, culpa provident fugit
+        deserunt animi, libero ducimus beatae? Temporibus tenetur deleniti
+        nobis? Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Repellendus, praesentium molestiae qui, ab eaque ratione sunt in est
+        error soluta blanditiis illo aliquid facere suscipit? Libero porro in
+        autem vel? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Sequi eos nemo soluta perspiciatis sint veritatis fugit! Iusto
+        laboriosam rem, suscipit vero consectetur neque excepturi officia
+        consequuntur, dolorum, nobis perferendis incidunt.
+      </p>
+    </section>
+
+    <script type="text/javascript">
+      var layer1 = document.getElementById("layer1");
+      scroll = window.pageYOffset;
+      document.addEventListener("scroll", function (e) {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer1.style.width = 100 + scroll / 5 + "%";
+      });
+
+      var layer2 = document.getElementById("layer2");
+      scroll = window.pageYOffset;
+      document.addEventListener("scroll", function (e) {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer2.style.width = 100 + scroll / 5 + "%";
+        layer2.style.left = scroll / 50 + "%";
+      });
+
+      var text = document.getElementById("text");
+      scroll = window.pageYOffset;
+      document.addEventListener("scroll", function (e) {
+        var offset = window.pageYOffset;
+        scroll = offset;
+        layer2.style.width = 100 + scroll / 5 + "%";
+        text.style.top = -scroll / 20 + "%";
+      });
+    </script>
+  </body>
+</html>
